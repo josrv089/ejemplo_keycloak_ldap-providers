@@ -5,9 +5,10 @@ Los servicios se crean por medio de contenedores que desplegarán las diferentes
 
 ## Requisitos
 Para el despliegue de la arquitectura es requerido la instalación de:
-- docker
-- docker compose
-- java jdk 
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker compose](https://docs.docker.com/compose/install/)
+- [JDK](https://adoptopenjdk.net/) Opcional se recomienda la versión de adopt openjdk
 - maven
-- 
+- [Apache Maven](https://maven.apache.org/guides/index.html)
 
+por medio de el siguiente archivo se crean los contenedores docker que tendrán los servicios para el desarrollo de la prueba
