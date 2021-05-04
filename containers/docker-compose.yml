@@ -10,9 +10,9 @@ services:
       TZ: 'America/Costa_Rica'
       PGTZ: 'America/Costa_Rica'
     ports:
-      - '5433:5432'
+      - '5432:5432'
     volumes:
-      - './init.sql:/docker-entrypoint-initdb.d/init.sql'
+      - 'resources/init.sql:/docker-entrypoint-initdb.d/init.sql'
       - 'postgres-data:/var/lib/postgresql/data/'
     networks:
       - lab-net
@@ -42,7 +42,7 @@ services:
     environment:
       DB_VENDOR: postgres
       DB_ADDR: postgres_container
-      DB_PORT: 5433
+      DB_PORT: 5432
       DB_DATABASE: labdb
       DB_SCHEMA: lab_keycloak
       DB_USER: userpgdb_docker
