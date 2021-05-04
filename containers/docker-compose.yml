@@ -67,9 +67,6 @@ services:
     environment:
       - LDAP_ORGANISATION="MyCompany CR"
       - LDAP_DOMAIN=labcr.com
-      - LDAP_BASE_DN= "dc=labcr,dc=com"
-      - LDAP_ADMIN_PASSWORD= "admin"
-
     ports:
       - "389:389"
       - "636:636"
