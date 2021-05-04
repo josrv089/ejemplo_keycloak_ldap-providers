@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_USER: userpgdb_docker
-      POSTGRES_PASSWORD: p4$WorD_d0k3r
+      POSTGRES_PASSWORD: p4zWorD_d0k3r
       POSTGRES_DB: labdb
       TZ: 'America/Costa_Rica'
       PGTZ: 'America/Costa_Rica'
@@ -28,7 +28,7 @@ services:
       DB_DATABASE: labdb
       DB_SCHEMA: lab_keycloak
       DB_USER: userpgdb_docker
-      DB_PASSWORD: p4$WorD_d0k3r
+      DB_PASSWORD: p4zWorD_d0k3r
       KEYCLOAK_USER: kc_admin
       KEYCLOAK_PASSWORD: kc_T1sa0Kpf4
       TZ: 'America/Costa_Rica'
