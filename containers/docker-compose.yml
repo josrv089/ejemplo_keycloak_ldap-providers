@@ -48,10 +48,15 @@ services:
     environment:
       - LDAP_ORGANISATION="MyCompany CR"
       - LDAP_DOMAIN=labcr.com
+      - LDAP_BASE_DN= "dc=labcr,dc=com"
+      - LDAP_ADMIN_PASSWORD= "admin"
+      - LDAP_CONFIG_PASSWORD= "config"
+      - LDAP_READONLY_USER= "false"
+      - LDAP_READONLY_USER_USERNAME= "readonly"
+      - LDAP_READONLY_USER_PASSWORD= "readonly"
     ports:
       - "389:389"
-    depends_on:
-      - keycloak
+      - "636:636"
     networks:
       - lab-net
 
