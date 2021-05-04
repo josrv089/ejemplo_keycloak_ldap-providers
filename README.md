@@ -8,7 +8,9 @@ Para el despliegue de la arquitectura es requerido la instalación de:
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [Docker compose](https://docs.docker.com/compose/install/)
 - [JDK](https://adoptopenjdk.net/) Opcional se recomienda la versión de adopt openjdk
-- maven
 - [Apache Maven](https://maven.apache.org/guides/index.html)
+
+## Referencia a documentación:
+-[OpenLDAP](https://www.openldap.org/doc/)
 
 por medio de el siguiente archivo se crean los contenedores docker que tendrán los servicios para el desarrollo de la prueba
