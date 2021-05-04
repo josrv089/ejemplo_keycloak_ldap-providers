@@ -1,8 +1,9 @@
 version: '3.8'
 services:
+
   postgres:
     container_name: postgres_container
-    image: postgres:latest
+    image: postgres:12
     environment:
       POSTGRES_USER: userpgdb_docker
       POSTGRES_PASSWORD: p4zWorD_d0k3r
@@ -47,8 +48,8 @@ services:
       DB_SCHEMA: lab_keycloak
       DB_USER: userpgdb_docker
       DB_PASSWORD: p4zWorD_d0k3r
-      #KEYCLOAK_USER: kc_admin
-      #KEYCLOAK_PASSWORD: kc_T1sa0Kpf4
+      KEYCLOAK_USER: kc_admin
+      KEYCLOAK_PASSWORD: kc_T1sa0Kpf4
       TZ: 'America/Costa_Rica'
     ports:
       - '9091:8080'
