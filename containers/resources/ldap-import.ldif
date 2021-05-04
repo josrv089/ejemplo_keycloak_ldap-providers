@@ -1,29 +1,11 @@
-
 version: 1
 
-## Entry 1: dc=labcr,dc=com
-#dn: dc=labcr,dc=com
-#dc: labcr
-#o: "MyCompany Inc."
-#objectclass: top
-#objectclass: dcObject
-#objectclass: organization
-
-## Entry 2: cn=admin,dc=labcr,dc=com
-#dn: cn=admin,dc=labcr,dc=com
-#cn: admin
-#description: LDAP administrator
-#objectclass: simpleSecurityObject
-#objectclass: organizationalRole
-#userpassword: {SSHA}iGmwNRRDcGxmafPklI1kcKivNq8cCb4j
-
-# Entry 3: ou=groups,dc=labcr,dc=com
 dn: ou=groups,dc=labcr,dc=com
 objectclass: organizationalUnit
 objectclass: top
 ou: groups
 
-# Entry 4: cn=admin,ou=groups,dc=labcr,dc=com
+# Entry 2: cn=admin,ou=groups,dc=labcr,dc=com
 dn: cn=admin,ou=groups,dc=labcr,dc=com
 cn: admin
 gidnumber: 501
@@ -31,7 +13,7 @@ memberuid: 1003
 objectclass: posixGroup
 objectclass: top
 
-# Entry 5: cn=developers,ou=groups,dc=labcr,dc=com
+# Entry 3: cn=developers,ou=groups,dc=labcr,dc=com
 dn: cn=developers,ou=groups,dc=labcr,dc=com
 cn: developers
 gidnumber: 500
@@ -41,13 +23,13 @@ memberuid: 1002
 objectclass: posixGroup
 objectclass: top
 
-# Entry 6: ou=users,dc=labcr,dc=com
+# Entry 4: ou=users,dc=labcr,dc=com
 dn: ou=users,dc=labcr,dc=com
 objectclass: organizationalUnit
 objectclass: top
 ou: users
 
-# Entry 7: cn=Bill Gates,ou=users,dc=labcr,dc=com
+# Entry 5: cn=Bill Gates,ou=users,dc=labcr,dc=com
 dn: cn=Bill Gates,ou=users,dc=labcr,dc=com
 cn: Bill Gates
 gidnumber: 500
@@ -62,7 +44,7 @@ uid: bgates
 uidnumber: 1000
 userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
 
-# Entry 8: cn=Elon Musk,ou=users,dc=labcr,dc=com
+# Entry 6: cn=Elon Musk,ou=users,dc=labcr,dc=com
 dn: cn=Elon Musk,ou=users,dc=labcr,dc=com
 cn: Elon Musk
 gidnumber: 501
@@ -74,10 +56,10 @@ objectclass: posixAccount
 objectclass: top
 sn: Elon
 uid: emusk
-uidnumber: 1003
+uidnumber: 1001
 userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
 
-# Entry 9: cn=Mark Zuckerberg,ou=users,dc=labcr,dc=com
+# Entry 7: cn=Mark Zuckerberg,ou=users,dc=labcr,dc=com
 dn: cn=Mark Cuban,ou=users,dc=labcr,dc=com
 cn: ark Zuckerberg
 gidnumber: 500
@@ -92,10 +74,10 @@ uid: mzuckerberg
 uidnumber: 1002
 userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
 
-# Entry 10: cn=Steve Jobs,ou=users,dc=labcr,dc=com
+# Entry 8: cn=Steve Jobs,ou=users,dc=labcr,dc=com
 dn: cn=Steve Jobs,ou=users,dc=labcr,dc=com
 cn: Steve Jobs
-gidnumber: 500
+gidnumber: 501
 givenname: Steve
 homedirectory: /home/users/sjobs
 mail: jobsmail@apple.com
@@ -104,12 +86,12 @@ objectclass: posixAccount
 objectclass: top
 sn: Jobs
 uid: sjobs
-uidnumber: 1001
+uidnumber: 1003
 userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
 
-# Entry 10: cn=Barack Obama,ou=users,dc=labcr,dc=com
-dn: cn=Steve Jobs,ou=users,dc=labcr,dc=com
-cn: Steve Jobs
+# Entry 9: cn=Barack Obama,ou=users,dc=labcr,dc=com
+dn: cn=Barack Obama,ou=users,dc=labcr,dc=com
+cn: Barack Obama
 gidnumber: 501
 givenname: Obama
 homedirectory: /home/users/bobama
@@ -119,5 +101,20 @@ objectclass: posixAccount
 objectclass: top
 sn: Barack
 uid: bobama
+uidnumber: 1004
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
+
+# Entry 10: cn=Ada Lovelace,ou=users,dc=labcr,dc=com
+dn: cn=Ada Lovelace,ou=users,dc=labcr,dc=com
+cn: Ada Lovelace
+gidnumber: 500
+givenname: Lovelace
+homedirectory: /home/users/alovelace
+mail: lovelace@desarrollo.com
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Ada
+uid: alovelace
 uidnumber: 1005
 userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
