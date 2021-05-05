@@ -106,7 +106,8 @@ Los demás campos se pueden llenar a con los valores de preferencia. La recomend
   - Archivo de configuración keyclok (KeycloakConfig.java)
   - Archivo de configuración de seguridad (SecurityConfig.java)
   - index controller (IndexController.java)
-  ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/proyecto.png)
+
+  - ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/proyecto.png)
 
 ### KeycloakConfig
 ```
