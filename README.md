@@ -214,5 +214,44 @@ Para esto se realizará un mapeo desde el `User Federation` configurado anterior
 Para cerrar sesión se debe ingresar a la url (http://localhost:8080/logout) y al volver a ingresar se podrá ver que ahora si es permitido el acceso
 
 ## Conexión desde google.
+Para poder configurar el acceso con google se requiere contar con una cuenta de desarrollador desde google y se deberá llevar en paralelo la configuración junto con los cambios en keycloak.
+### Desde keycloak:
+- Dar click sobre `Identity Providers`
+- Seleccionar Google
+- `Client ID` y `Client Secret` son dos campos que se llenarán más adelante.
+- El campo `Redirect URI` se utilizará para la configuración desde google.
+
+### Desde google.
+- Ir a [google api](https://console.developers.google.com/)
+- En la parte superior dar click al lado del logo, donde  se desplegará un cuadro de dialogo para crear un API.
+- Seleccionar `Proyecto Nuevo`
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google.png)
+- Asignar el nombre y dar click sobre el botón `Crear`
+- Al crear el proyecto se desplegará el menú de administración.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google2.png)
+- Dar clock sobre Credenciales.
+- En esta pantalla aparecerá un mensaje recordando configurar el consentimiento de OAuth, es importante configurar este consentimiento.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google3.png)
+- En la pantalla de consentimiento se debe seleccionar "Externos" y dar click sobre `CREAR`
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google4.png)
+- En la siguiente pantalla se configurará la información que aparecerá en el cuadro desplegable a la hora de iniciar sesión la primera vez.
+- Seleccionar el nombre de la aplicación que leerán todos los usuarios,
+- Llenar los demás campos de acuerdo a los requisitos de la aplicación.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google5.png)
+- Dar click en guardar y continuar.
+- Regresar nuevamente a Credenciales y dar click sobre Crear Credenciales
+- Seleccionar la opción Id de cliente de oAuth
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google6.png)
+- Seleccionar tipo de aplicación web.
+- Ingresar el nombre
+- En el espacio `URI de redireccionamiento autorizados` se debe ingresar el valor del campo `Redirect URI` de keycloak mencionado anteriormente.
+- Al guardar los cambios, se mostrarán los valores que se deberán ingresar en keycloak.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google7.png)
+- Regresar a Keycloak y completar los campos
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/google8.png)
+
+Con esta configuración al ingresar nuevamente a la pantalla de login desde la aplicación java, se mostrará la opción de ingresar con google.
+
+
 
 ## conexión desde Facebook.
