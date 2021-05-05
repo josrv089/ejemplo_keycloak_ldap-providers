@@ -34,6 +34,7 @@ Para el servidor LDAP se puede ingresar cualquier estructura organizacional, sin
 
 Una vez que se haya importado la estructura, se deberá ver como la siguiente imagen:
 ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/importados.png)
+
 Con esto la configuración del servidor ldap se encuentra finalizada.
 
 El siguiente paso será ingresar a keycloak por medio del siguiente enlace:
@@ -54,11 +55,17 @@ kc_T1sa0Kpf4
 En el nuevo realm se debe de crear un nuevo cliente con los siguientes datos:
 - Client ID : laboratorio_web
 - Client Protocol: openid-conect
--- click En create
+- click En create
 - En la pestaña Settings
   - Para el campo Valid Redirect URIs establecer el valor ```http://localhost:9080```
   - Guardar los cambios
 - En la pestaña Roles
   - Agregar un nuevo rol con el nombre user
 
-##
+## Configuración de la conexión hacia LDAP
+-En el menú principal seleccionar la opción `User Federation`
+-Seleccionar el tipo de proveedor ldap
+-Buscar el campo que dice `Vendor` y seleccionar la opción `Other`
+Dada la configuración actual, en el campo `Username LDAP attribute` se deberá ingresar `mail`, sin embargo este campo también se puede configurar con el valor por defecto `uid`
+-Para el campo `Connection URL` se debe ingresar el valor `ldap://ldap_container` Ya que corresponde al contenedor donde está el servidor de LDAP, este parámetro podrá ser configurado con algún otro servidor ldap. La presionar sobre el botón `Test Connection` deberá mostrarse un mensaje de conexión exitosa.
+![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/configLDAP.png)
