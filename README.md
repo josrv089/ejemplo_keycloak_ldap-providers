@@ -32,3 +32,29 @@ Para el servidor LDAP se puede ingresar cualquier estructura organizacional, sin
 (imgs/importldap.png)
 Una vez que se haya importado la estructura, se deberá ver como la siguiente imagen:
 (imgs/importados.png)
+Con esto la configuración del servidor ldap se encuentra finalizada.
+
+El siguiente paso será ingresar a keycloak por medio del siguiente enlace:
+(http://$(url_instalacion):9091/auth/)
+Ingresar a la consola de administración, ingresar con los datos asignados en el docer compouse:
+```
+kc_admin
+kc_T1sa0Kpf4
+```
+### NOTA
+-Para las versiones más nuevas de keycloak por defecto se establece la conexión por medio de ssl, por lo que dependiendo el entorno de ejecución puede ser necesario instalar certificados o bien, a nivel de base de datos cambiar en la tabla REALM el valor de la columna ssl_required a "NONE"
+
+## Crear un nuevo realm
+-En la parte superior izquierda se debe ubicar el mouse sobre "Master" para que se despliegue la opción de crear otro realm:
+-click sobre "Add Realm"
+(imgs/crear_realm.png)
+
+En el nuevo realm se debe de crear un nuevo cliente con los siguientes datos:
+- Client ID : laboratorio_web
+- Client Protocol: openid-conect
+-- click En create
+- En la pestaña Settings
+  - Para el campo Valid Redirect URIs establecer el valor ```http://localhost:9080```
+  - Guardar los cambios
+- En la pestaña Roles
+  - Agregar un nuevo rol con el nombre user
