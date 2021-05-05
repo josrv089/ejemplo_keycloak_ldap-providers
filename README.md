@@ -29,9 +29,11 @@ Login DN: cn=admin,dc=labcr,dc=com
 Password: admin
 ```
 Para el servidor LDAP se puede ingresar cualquier estructura organizacional, sin ambargo para el ejemplo practico que se está presentando se ofrece una estrcutura predefinida en la carpeta ldap, la cual puede ser importada desde el administrador de ldap indicado en el punto anterior, para lo cual se puede utilizar la opción de importar:
-[](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/importldap.png)
+
+! [] (https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/importldap.png)
+
 Una vez que se haya importado la estructura, se deberá ver como la siguiente imagen:
-[](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/importados.png)
+! [] (https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/importados.png)
 Con esto la configuración del servidor ldap se encuentra finalizada.
 
 El siguiente paso será ingresar a keycloak por medio del siguiente enlace:
@@ -47,7 +49,7 @@ kc_T1sa0Kpf4
 ## Crear un nuevo realm
 -En la parte superior izquierda se debe ubicar el mouse sobre "Master" para que se despliegue la opción de crear otro realm:
 -click sobre "Add Realm"
-[](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/crear_realm.png)
+! [] (https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/crear_realm.png)
 
 En el nuevo realm se debe de crear un nuevo cliente con los siguientes datos:
 - Client ID : laboratorio_web
