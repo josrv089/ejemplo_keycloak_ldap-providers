@@ -213,7 +213,7 @@ Para esto se realizará un mapeo desde el `User Federation` configurado anterior
 ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/rolMapper.png)
 Para cerrar sesión se debe ingresar a la url (http://localhost:8080/logout) y al volver a ingresar se podrá ver que ahora si es permitido el acceso
 
-## Conexión desde google.
+## Autenticación con Google.
 Para poder configurar el acceso con google se requiere contar con una cuenta de desarrollador desde google y se deberá llevar en paralelo la configuración junto con los cambios en keycloak.
 ### Desde keycloak:
 - Dar click sobre `Identity Providers`
@@ -254,4 +254,37 @@ Con esta configuración al ingresar nuevamente a la pantalla de login desde la a
 
 
 
-## conexión desde Facebook.
+## Autenticación con Facebook.
+De la misma forma que la autenticación con google se deberá configurar en paralelo a keycloak con el api de Facebook
+
+### Desde Keycloak.
+- Dar click sobre `Identity Providers`
+- Seleccionar `Add provider`
+- Seleccionar Facebook
+- Tener en cuenta el campo `Redirect URI` ya que será utilizado desde la configuración de Facebook.
+
+### Desde Facebook.
+Se debe seguir los pasos indicados en la página de facebook developers, ya que es normal que esté cambiando la parte visual de la misma, por lo que se ofrece una guia general teniendo en cuenta que esto puede variar a lo largo del tiempo.
+
+- Ir a la página de [Facebook developers](https://developers.facebook.com)
+- Logearse en la consola de administración
+- Registrar la cuenta como cuenta de desarrollador
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook1.png)
+- Seguir los pasos para completar el registro como desarrollador
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook2.png)
+- Crear nueva aplicación
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook3.png)
+- Agregar producto de inicio de sesión con facebook
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook4.png)
+- Seleccionar tipo de aplicación web.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook5.png)
+- Ingresar en el campo `URL del sitio web` la dirección generada por Keycloak.
+- Desde la cofiguración básica seleccionar los campos de identificador de la app y la clave secreta de la app e incluirlos dentro de Keyclok.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook6.png)
+
+Después de esta configuración se podrá ingresar a la aplicación y realizar el login, hasta este punto debe aparecer tanto el acceso con google como con Facebook.
+- ![](https://github.com/josrv089/ejemplo_keycloak_ldap-providers/blob/main/imgs/facebook7.png)
+
+### Notas:
+- De acuerdo a las configuraciones realizadas, al utilizar Google como Proveedor de identidad, este no permite usar ip's por lo que keycloak debe estar bajo un nombre de dominio valido.
+- Al usar Facebook como proveedor de identidades, a pesar de que permite agregar ip's en los dominios, no se recomienda que keycloak se encuentre en una ip diferente a la aplicación, ya que se complica el redireccionamiento. Se  recomienda que igual estén bajo un mismo nombre de dominio.
