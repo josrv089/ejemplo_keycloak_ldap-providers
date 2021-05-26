@@ -255,7 +255,7 @@ Con esta configuración al ingresar nuevamente a la pantalla de login desde la a
 
 
 ## Autenticación con Facebook.
-De la misma forma que la autenticación con google se deberá configurar en paralelo a keycloak con el api de Facebook
+De la misma forma que la autenticación con Google se deberá configurar en paralelo a keycloak con el api de Facebook
 
 ### Desde Keycloak.
 - Dar click sobre `Identity Providers`
@@ -288,3 +288,16 @@ Después de esta configuración se podrá ingresar a la aplicación y realizar e
 ### Notas:
 - De acuerdo a las configuraciones realizadas, al utilizar Google como Proveedor de identidad, este no permite usar ip's por lo que keycloak debe estar bajo un nombre de dominio valido.
 - Al usar Facebook como proveedor de identidades, a pesar de que permite agregar ip's en los dominios, no se recomienda que keycloak se encuentre en una ip diferente a la aplicación, ya que se complica el redireccionamiento. Se  recomienda que igual estén bajo un mismo nombre de dominio.
+
+
+## Autenticación con Twitter.
+Se deberá configurar en paralelo a keycloak con el api de Twitter
+
+### Desde Keycloak.
+- Dar click sobre `Identity Providers`
+- Seleccionar `Add provider`
+- Seleccionar Twitter
+- Tener en cuenta el campo `Redirect URI` ya que será utilizado desde la configuración de Twitter.
+
+### Desde Twitter.
+- Ir a la página de [Twitter developers apps](https://developer.twitter.com/en/apps)
