@@ -1,16 +1,8 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??); section>
     <#if section = "header">
-    
     <div class="makeStyles-paper-16">
-
-    <div class="MuiAvatar-root MuiAvatar-circle makeStyles-avatar-17 MuiAvatar-colorDefault">
-        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
-            </path>
-        </svg>
-    </div>
-        ${msg("doLogIn")}
+        ${msg("logIn")}
     </div>
     <#elseif section = "form">
         <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
@@ -53,12 +45,10 @@
                                 </#if>
                             </div>
                         </div>
-                        <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
-                            <input type="hidden" id="id-hidden-input" name="credentialId"
-                                   <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
+                        <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}" >
                             <input tabindex="4"
                                    class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-                                   name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                                   name="login" id="kc-login" type="submit" value="${msg("doLogIn" )}"/>
                         </div>
                     </form>
                 </#if>
@@ -76,21 +66,22 @@
             </#if>
         </div>
         <!-- sfs personalización -->
-        <div id="kc-registration">
-            <br/>
-            <hr/>
-            <div class="text-center" style="margin-bottom: 5px">
-                ¿No tienes cuenta?<br/>
+        <div id="kc-registration" style="text-align:center">
+            
+             <div class="text-center" style="margin-bottom: 5px">
+               <br/> O ingrese con <br/>
             </div>
-            <a href="/public/crearCuenta.xhtml" class="btn btn-sfs-azul">Crear cuenta</a>
+            <button class="${properties.kcButtonFacebookClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"><i class="fa fa-facebook-square"></i> Continuar con Facebook</button>
             <br/>
-            <hr/>
+            <button class="${properties.kcButtonGoogleClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"><i class="fa fa-google"></i> Continuar con Google</button>
+            <br/>
+            <button class="${properties.kcButtonInstagramClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"><i class="fa fa-instagram"></i> Continuar con Instagram</button>
             <div class="text-center" style="margin-bottom: 5px">
-                ¿Olvidaste los datos de la cuenta?<br/>
+                <br/>¿No tiene una cuenta todavía?<br/>
             </div>
-            <a href="/public/recuperarContrasenna/recuperarContrasenna.xhtml" class="btn btn-sfs-azul">Recuperar cuenta</a>
+            <a href="/public/crearCuenta.xhtml" class="btn-sfs-azul">Registrarme ahora</a>
         </div>
-
+        
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
             <div id="kc-registration">

@@ -61,30 +61,6 @@ services:
       - './themes:/opt/jboss/keycloak/themes' #Posteriormente esta carpeta se usará para cargar el tema
       - './resources/keycloak/disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli'
      
-  ldap:
-    image: osixia/openldap:latest
-    container_name: ldap_container
-    environment:
-      - LDAP_ORGANISATION="MyCompany CR"
-      - LDAP_DOMAIN=labcr.com
-    ports:
-      - "389:389"
-      - "636:636"
-    networks:
-      - lab-net
-
-  phpldapadmin:
-    image: osixia/phpldapadmin:0.9.0
-    container_name: phpldapadmin_container
-    environment:
-      - PHPLDAPADMIN_LDAP_HOSTS=ldap
-    ports:
-      - "6443:443"
-    depends_on:
-      - ldap
-    networks:
-      - lab-net
-    restart: always
 
 networks:
   lab-net:

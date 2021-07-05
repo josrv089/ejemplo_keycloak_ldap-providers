@@ -1,14 +1,25 @@
 .login-pf body {
-    height: 100vh;
+    height: 100%;
     background-color: #fafafa;
-    background-size: cover;
-    background: #fafafa;
+    background: url(../img/iceEdificio3.jpg);
+    /*background: url(../../../../ice_energia/login/resources/img/logo_ice.png);*/
+    background-repeat: no-repeat;
+    margin: 0;
+    display: block;
+    background-position: center;
+}
+.login-pf-page .test {
+    background: url(../../../../ice_energia/login/resources/img/logo_ice.png);
+}
+
+.card-pf {  
+    background-color: #ffffff!important;  
 }
 
 .alert-error {
     color: #333333;
     border-color: #cc0000;
-    background-color: #ffffff;
+    background-color: #ffffff;  
 }
 
 #kc-locale ul {
@@ -342,10 +353,7 @@ a.zocial {
     }
 }
 
-@media (max-width: 767px) {
-    .login-pf body {
-        background: white;
-    }
+
 
     #kc-header {
         float: none;
@@ -512,7 +520,29 @@ a.zocial {
 
 .login-pf-page .btn-primary {
     margin-top: 0;
+    border-radius: 50px;
 }
+
+.login-pf-page .btn-google {
+    margin-top: 0;
+    border-radius: 50px;
+    background-color:white;
+}
+
+.login-pf-page .btn-facebook {
+    margin-top: 0;
+    border-radius: 50px;
+    background-color: #4267B2;
+    color:white;
+}
+
+.login-pf-page .btn-instagram {
+    margin-top: 0;
+    border-radius: 50px;
+    background-color: #E1306C;
+    color:white;
+}
+
 
 .login-pf-page .list-view-pf .list-group-item {
     border-bottom: 1px solid #ededed;
