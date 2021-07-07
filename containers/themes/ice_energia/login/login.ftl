@@ -1,6 +1,9 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??); section>
     <#if section = "header">
+    <img src="../login/resources/img/favicon.ico">
+    <div class="test">
+    </div>
     <div class="makeStyles-paper-16">
         ${msg("logIn")}
     </div>
