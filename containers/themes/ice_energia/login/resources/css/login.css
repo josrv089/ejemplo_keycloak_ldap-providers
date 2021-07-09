@@ -19,6 +19,7 @@
 }
 
 .card-pf {  
+    max-width: 440px!important;
     background-color: #ffffff!important;  
 }
 
