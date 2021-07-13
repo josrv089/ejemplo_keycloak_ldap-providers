@@ -1,8 +1,8 @@
 .login-pf body {
     height: 100%;
     background-color: #fafafa;
-    /*background: url(../img/fondo.jpg);*/
-    background: url(../img/fondo03.png);
+    background: url(../img/fondo.jpg);
+    /*background: url(../img/fondo03.png);*/
     /*background: url(../../../../ice_energia/login/resources/img/logo_ice.png);*/
     background-repeat: no-repeat;
     margin: 0;
