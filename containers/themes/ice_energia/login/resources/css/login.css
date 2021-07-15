@@ -1,8 +1,7 @@
 .login-pf body {
     height: 100%;
-    background-color: #fafafa;
-    /*background: url(../img/fondo.jpg);*/
-    background: url(../img/fondo03.png);
+    /*background-color: #fafafa;*/
+    /*background: url(../img/fondo03.png);*/
     background-repeat: no-repeat;
     margin: 0;
     display: block;
@@ -10,12 +9,8 @@
 }
 
 .test {  
-    text-align: center;
-    height: 50px;
-    width: 100px;
-   /* background: url(../img/logo_ice.png);*/
-    background: url(../img/favicon.ico);
-    background-repeat: no-repeat;
+    background: url(../img/fondo03.png); 
+    background-color:#cc0000;
 }
 
 .card-pf {  
