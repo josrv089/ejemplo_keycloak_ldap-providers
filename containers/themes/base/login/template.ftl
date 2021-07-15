@@ -32,32 +32,6 @@
 </head>
 
 <body onload="getRandomNumber();">
-<script>
-    function getRandomNumber() {
-        
-        var minNumber = 1; // The minimum number you want
-        var maxNumber = 2; // The maximum number you want
-        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number  
-        if(randomnumber==1){
-             alert('1');
-            document.body.style.backgroundColor = "red";
-            //document.body.style.setProperty ("background-color", "red", "important");
-        }else if(randomnumber==2){
-            alert('2');
-            document.body.style.backgroundColor = "blue";
-            //document.body.style.setProperty ("background-color", "blue", "important");
-        }else if(randomnumber==3){
-            alert('3');
-            document.body.style.backgroundColor = "black";
-            //document.body.style.setProperty ("background-color", "black", "important");
-        }
-        return false; // Returns false just to tidy everything up
-    }
-    
-</script>
-<div id="myNumber"></div>
-     <p id="yourNumber">
-    </p>
   <div class="${properties.kcLoginClass!}">
         <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
         <header class="${properties.kcFormHeaderClass!}">
@@ -166,5 +140,26 @@
         </div>
   </div>
 </body>
+<script>
+    function getRandomNumber() {
+        
+        var minNumber = 1; // Valor minimo
+        var maxNumber = 4; // Valor maximo
+        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Genera numero aleatorio
+          
+        if(randomnumber==1){
+             document.body.className = 'fondo1';
+        }else if(randomnumber==2){
+            document.body.className = 'fondo2';
+        }else if(randomnumber==3){
+            document.body.className = 'fondo3';
+        } else if(randomnumber==4){
+            document.body.className = 'fondo4';
+        }else if(randomnumber==5){
+            document.body.className = 'fondo5';
+        }
+        return false;
+    }
+</script>
 </html>
 </#macro>

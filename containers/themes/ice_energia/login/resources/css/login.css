@@ -1,16 +1,30 @@
 .login-pf body {
     height: 100%;
-    /*background-color: #fafafa;*/
-    /*background: url(../img/fondo03.png);*/
+    background-color: #fafafa;
     background-repeat: no-repeat;
     margin: 0;
     display: block;
     background-position: center;
 }
 
-.test {  
-    background: url(../img/fondo03.png); 
-    background-color:#cc0000;
+.fondo1 {  
+    background: url(../img/fondo01.png)!important;
+}
+
+.fondo2 {  
+    background: url(../img/fondo02.png)!important;
+}
+
+.fondo3 {  
+    background: url(../img/fondo03.png)!important;
+}
+
+.fondo4 {  
+    background: url(../img/fondo04.png)!important;
+}
+
+.fondo5 {  
+    background: url(../img/fondo05.png)!important;
 }
 
 .card-pf {  
