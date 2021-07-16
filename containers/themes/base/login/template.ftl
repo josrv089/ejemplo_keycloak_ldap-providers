@@ -144,22 +144,11 @@
     function getRandomNumber() {
         
         var minNumber = 1; // Valor minimo
-        var maxNumber = 4; // Valor maximo
+        var maxNumber = 9; // Valor maximo
         var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Genera numero aleatorio
-          
-        if(randomnumber==1){
-             document.body.className = 'fondo1';
-        }else if(randomnumber==2){
-            document.body.className = 'fondo2';
-        }else if(randomnumber==3){
-            document.body.className = 'fondo3';
-        } else if(randomnumber==4){
-            document.body.className = 'fondo4';
-        }else if(randomnumber==5){
-            document.body.className = 'fondo5';
-        }
+        document.body.className = 'fondo'+ randomnumber;//concatena el numero para ubicar la clase a mostrar con la imagen correcta
         return false;
-    }
+    }// fin getRandomNumber
 </script>
 </html>
 </#macro>
